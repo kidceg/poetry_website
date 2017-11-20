@@ -1,0 +1,342 @@
+html{
+  width: 100%;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+
+/*导航部分开始*/
+nav{
+  width: 100%;
+  height:50px;
+  line-height: 50px;
+  /*background-color:wheat;*/
+  border-bottom: 1px solid gray;
+}
+
+.left-word{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 16px;
+  /*background-color: burlywood;*/
+}
+
+.search-box{
+  display: inline-block;
+  width: 180px;
+  height: 28px;
+  line-height: 28px;
+  border-bottom: 1px solid gray;
+}
+
+#searchBtn{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/searchPic.png");
+  background-size: 100%;
+  /*border:1px solid black;*/
+  /*top:50%;*/
+  transform: translateY(30%);
+}
+
+.search{
+  width: 150px;
+  font-size: 16px;
+  border: none;
+}
+
+#login,#signUp{
+  font-size: 16px;
+  float: right;
+  padding: 5px;
+  line-height:13px;
+  /*top:50%;*/
+  transform: translateY(50%);
+  margin-right: 20px;
+  border:1px solid gray;
+}
+
+/*导航部分结束*/
+
+/*大标题部分开始*/
+.header{
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.header h1{
+  font-size: 40px;
+}
+
+#writing{
+  margin: 10px auto;
+  padding: 5px;
+  width: 65px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #75D081;
+}
+
+/*大标题部分结束*/
+
+/*轮播图部分开始*/
+#imageCarousel {
+  margin: 20px auto;
+  width: 88%;/* 900px; */
+  height: 500px;
+  /*border: 3px solid #333;*/
+  overflow: hidden;
+  position: relative;
+}
+
+#pic {
+  /* 7个图片尺寸900*7 */
+  position: absolute;
+  width: 700%;  /* 6300px */
+  height: 100%;
+  left: -100%;
+  z-index: 1;
+}
+
+#pic img {
+  float: left;
+}
+
+#buttons {
+  position: absolute;
+  height:12.45%;
+  width: 30%;
+  left: 35%;
+  bottom: 5.5%;
+  z-index: 2;
+}
+
+#buttons span {
+  display: inline-block;
+  cursor: pointer;
+  float: left;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6%;
+  height: 40%;
+  background: white;
+  border-radius: 50%;
+  margin-left: 8.3%;
+  /* opacity: 0.7; */
+}
+
+.unon{
+  opacity: 0.6;
+}
+
+.on {
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  display: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 80px; /* 用媒体查询自适应 */
+  font-weight: 900;
+  top: 40%;
+  color: white;
+  text-shadow:3px 3px 3px #162866;
+  opacity: 0.7;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+#imageCarousel:hover .arrow {
+  display: block;
+}
+
+#pre {
+  left: 20px;
+}
+
+#next {
+  right: 20px;
+}
+
+/*轮播图部分结束*/
+
+
+/*最新诗歌部分开始*/
+.newest{
+  margin-top: 30px;
+  text-align: center;
+}
+.newest h1{
+  font-size: 20px;
+}
+
+.contain{
+  display: inline-block;
+  width: 100%;
+  height: 500px;
+}
+
+.contain li{
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  height: 50%;
+  margin: 10px;
+  border: 1px solid #839DB8;
+  overflow: hidden;
+  box-shadow: 1px 1px 1px #C7D0DB;
+}
+
+.contain li:before{
+  content:"";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height:100%;
+  top:0;
+  left:0;
+  background-image: url(../images/newest1.jpg);
+  background-size: 100% 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.contain li:after{
+  content:"阅读全诗";
+  position: absolute;
+  display: block;
+  padding:5px;
+  font-size: 15px;
+  width: 100%;
+  bottom:0;
+  left:0;
+  background-color: white;
+  border-top:1px solid #839DB8;
+}
+
+.contain h2{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size:20px;
+}
+
+.contain h3{
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.contain p{
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 2px;
+}
+
+.contain p:after{
+  content:"";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height:100%;
+  top:0;
+  left:0;
+  background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
+}
+
+/*最新诗歌部分结束*/
+
+/*推荐诗友部分开始*/
+.commend{
+  margin-top: 10px;
+}
+
+/*媒体查询部分开始*/
+@media (max-width: 992px){
+  /* 轮播箭头大小 */
+  .arrow{
+    font-size: 60px;
+  }
+
+}
+
+@media (max-width: 992px){
+  /* 轮播箭头大小 */
+  .arrow{
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 800px){
+  /* 轮播箭头大小 */
+  .arrow{
+    font-size: 55px;
+  }
+
+  .contain{
+    width: 95%;
+  }
+  .contain li{
+    width: 28%;
+  }
+}
+
+@media (max-width: 650px){
+  /* 轮播箭头大小 */
+  .arrow{
+    font-size: 50px;
+  }
+  .contain li{
+    width: 40%;
+  }
+}
+
+@media (max-width: 450px){
+  .header h1{
+    font-size: 35px;
+  }
+  /* 轮播箭头大小 */
+  .arrow{
+    font-size: 40px;
+  }
+  .contain li{
+    width: 60%;
+  }
+
+}
+
+@media (max-width: 300px){
+  .header h1{
+    font-size: 30px;
+  }
+  /* 轮播箭头大小 */
+  .arrow{
+    font-size: 25px;
+  }
+  .contain{
+    height: 400px;
+  }
+  .contain li{
+    width: 90%;
+  }
+  .contain p{
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
+}
+
+/*媒体查询部分结束*/
