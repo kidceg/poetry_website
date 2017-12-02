@@ -40,7 +40,7 @@ nav{
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url("../images/searchPic.png");
+  background: url("../images/searchPic.png");
   background-size: 100%;
   /*border:1px solid black;*/
   /*top:50%;*/
@@ -64,139 +64,198 @@ nav{
   border:1px solid gray;
 }
 
+#login:hover,#sign:hover{
+  color: #3C89BD;
+  border:1px solid #3C89BD;
+  cursor: pointer;
+}
 /*注册模块部分开始*/
+
+#signLogin{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #5E5D5C;
+  z-index: 4;
+}
+
 #signUp{
   /* visibility: hidden; */
   display: block;
+  width: 400px;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 400px;
-  height: 316px;
   border: 1px solid #767B84;
-  box-shadow: 3px 2px 2px #595959;
+  box-shadow:0 0 6px #4C4C4C;
+  /*（水平方向，垂直方向，模糊程度）*/
   border-radius: 3px;
   text-align: center;
   font-size: 15px;
-  position: absolute;
   z-index: 9999;
-  background-color: white;
+  background-color: #fff;
 }
 
 .sign-header{
-  margin-bottom: 35px;
-  background-color: #EDF1F5;
-  width: 400px;
   height: 45px;
   border-bottom:1px solid #CFD3D9;
 }
 
 
 .sign-header p{
-  color:#5E5D5C;
-  padding-top: 3px;
-  font-size: 25px;
-  line-height: 40px;
-  margin-bottom: 30px;
+  color:#5E5D5C;;
+  font-size: 23px;
+  line-height: 45px;
 }
 
 
-/*#signUpContainer{*/
-  /*display: none;*/
-  /*position: fixed;*/
-  /*top: 0;*/
-  /*left: 0;*/
-  /*height: 100%;*/
-  /*width: 100%;*/
-  /*color: #5E5D5C;*/
-/*}*/
-
 #signUpClose{
-  float: right;
-  width: 45px;
-  height: 50px;
-  margin: 8px 0 0 0;
-  font-size: 30px;
-  line-height: 20px;
+  /*display: inline-block;*/
+  width: 18px;
+  height:18px;
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  background: url("../images/close.png");
+  background-size: 100%;
   cursor: pointer;
 }
 
 #signUpClose:hover{
-  font-size: 40px;
-  color: #D61F2D;
-  text-shadow: 1px 1px 1px #767B84;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height:20px;
 }
-
 
 #signUpBox{
-  width: 85%;
+  width: 70%;
+  margin: 12px auto 0;
 }
 
-#signUpBox div{
-  margin-bottom: 8px;
-}
-
-#signUpBox input.text{
-  width: 180px;
-  height: 18px;
-  line-height: 18px;
+.sign_text{
+  width:calc(100% - 15px);
+  height: 30px;
+  margin-top: 7px;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 25px;
   border: 1px solid #BABABA;
-  border-radius: 3px;
-  padding-left: 10px;
 }
 
-/* #screen{
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  z-index: 9998;
-  opacity: 0.3;
-
-} */
+#passTips{
+  display: none;
+  /*display: block;*/
+  margin-top: 7px;
+  width: 200px;
+  height: 20px;
+  background: url("../images/ruo.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
 #tips{
-  margin-top: 10px;
-  margin-bottom: 20px;
+  display: none;
+  position: relative;
+  margin-top: 15px;
+  text-align: left;
+}
+
+#tips p{
+  width:95%;
+  padding-left: 20px;
   color: red;
-  font-size: 12px;
+  font-size: 13px;
+  word-wrap:break-word; word-break:break-all;
+}
+
+#tips span{
+  width:15px;
+  height:15px;
+  position: absolute;
+  left:0;
+  top:0;
+  margin-top: 1px;
+  margin-right: 3px;
+  background: url("../images/wrong.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #signButton{
-  width: 75px;
+  width:70%;
   height: 35px;
-  font-size: 16px;
-  color: black;
-  background-color: #E9E9E9;
+  /*margin: 15px auto 10px;*/
+  margin-top: 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #6a6b69;
+          /*#80B136;*/
   border:1px solid #989898;
-  border-radius: 3px;
-  box-shadow: 0 1px 0.5px #767B84;
   cursor: pointer;
 }
 
-#signButton:hover{
-  background-color: #F2F2F2;
+/*#signButton:hover{*/
+  /*background-color:#434343;*/
+          /*!*#90CE55;*!*/
+/*}*/
+
+.to-login{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #296F8F;
+  font-size: 12px;
+  cursor: pointer;
 }
 
-.passwordP{
-  position: resize;
-}
-
-#passtips{
+#screen{
   display: none;
+  /*display: block;*/
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 143px;
-  left: 310px;
-  width: 22px;
-  height: 18px;
-  color: white;
-  background-color: red;
-  font-size: 13px;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 3;
+  opacity: 0.3;
 }
-/*注册模块部分结束*/
+
+#signUpBox input::-webkit-input-placeholder { /* WebKit browsers */
+  color: #C8C8C8;
+}
+#signUpBox input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:#C8C8C8;
+}
+#signUpBox input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #C8C8C8;
+}
+#signUpBox input::-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #C8C8C8;
+}
+
+#tologin{
+  /* visibility: hidden; */
+  display: block;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid #767B84;
+  box-shadow:0 0 6px #4C4C4C;
+  /*（水平方向，垂直方向，模糊程度）*/
+  border-radius: 3px;
+  text-align: center;
+  font-size: 15px;
+  z-index: 9999;
+  background-color: #fff;
+}
+  /*注册模块部分结束*/
 
 /*导航部分结束*/
 
@@ -344,7 +403,7 @@ nav{
   height:100%;
   top:0;
   left:0;
-  background-image: url(../images/newest1.jpg);
+  background: url(../images/newest1.jpg);
   background-size: 100% 100%;
   opacity: 0.5;
   z-index: -1;
